@@ -1,0 +1,38 @@
+﻿<Window x:Class="lab_105_game_name_and_score_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_105_game_name_and_score_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="Auto" Width="Auto" Background="BlanchedAlmond">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Content="Name:" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" FontSize="36"/>
+        <Label Content="Level Reached:" Grid.Row="3" Grid.ColumnSpan="4" FontSize="36" Margin="0,0,66,0" Grid.Column="1"/>
+        <Label Content="Score:" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" FontSize="36"/>
+        <TextBox x:Name="nameBox" Grid.ColumnSpan="6" Grid.Column="3" Grid.Row="1" FontSize="48" Margin="0,0,76.6,0"/>
+        <TextBox x:Name="levelBox" Grid.ColumnSpan="4" Grid.Column="5" Grid.Row="3" FontSize="48" Margin="0,0,76.6,0" HorizontalAlignment="Right" Width="229"/>
+        <TextBox x:Name="scoreBox" Grid.ColumnSpan="5" Grid.Column="3" Grid.Row="5" FontSize="48"/>
+    </Grid>
+</Window>
