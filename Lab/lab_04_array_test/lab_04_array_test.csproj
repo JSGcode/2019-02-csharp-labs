@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\lab_04_array\lab_04_array.csproj">
+    <ProjectReference Include="..\lab_04_array\Lab_04_array.csproj">
       <Project>{84de9fe1-9cc2-4ec5-ab1b-73a33b8caf0e}</Project>
-      <Name>lab_04_array</Name>
+      <Name>Lab_04_array</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
