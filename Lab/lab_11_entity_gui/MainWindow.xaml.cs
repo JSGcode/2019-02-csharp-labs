@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Lab_101_speedtype_gui
+namespace lab_11_entity_gui
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,17 @@ namespace Lab_101_speedtype_gui
         public MainWindow()
         {
             InitializeComponent();
+            initilize();
+
+        }
+
+        private void ListBox01_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        void initilize()
+        {
+
         }
     }
 }
