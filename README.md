@@ -16,9 +16,9 @@
 
 ### Projects include:
 * 101 Speedtype. YES BUT NOT EXACTLY SPECIFIED SPEC
-    - YES 101 Speedtype : just timing a basic time to type through the alphabet
-    - YES 101 Speedtype : just timing a basic time to type through the randomly generated alphabet
-* 102 Speedtype GUI - In progress
+    - 101 Speedtype : just timing a basic time to type through the alphabet - Done
+    - 101 Speedtype : just timing a basic time to type through the randomly generated alphabet - Done
+* 102 Speedtype GUI - Done
 * 103 Production Line 100 Items - In progress
 * 104 Array List Queue Stack  - Done
 * 105 Game with Name Level Score Saving To Text File - Done
