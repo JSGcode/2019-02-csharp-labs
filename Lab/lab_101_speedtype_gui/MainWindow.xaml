@@ -28,6 +28,16 @@
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
+        <Label Content="Speed-Type" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="2" FontSize="46"/>
+        <Label Content="Type the following:" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="4" Grid.RowSpan="2" FontSize="32"/>
+        <Label Content="Timer:" Grid.Column="7" Grid.ColumnSpan="4" Grid.Row="4" Grid.RowSpan="2" FontSize="32"/>
+        <TextBox x:Name="Output" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="5" FontSize="32" IsReadOnly="True"/>
+        <TextBox x:Name="Timer" Grid.ColumnSpan="2" Grid.Column="7" Grid.Row="5" FontSize="32" IsReadOnly="True"/>
+        <TextBox x:Name="Input" Grid.ColumnSpan="8" Grid.RowSpan="2" Grid.Column="1" Grid.Row="7" FontSize="32" TextChanged="Input_TextChanged" TextWrapping="Wrap"/>
+        <CheckBox x:Name="IsRandom" Content="Check For Random" Grid.Column="7" Grid.ColumnSpan="5" Grid.Row="3" FontSize="14"/>
+        <Button Grid.ColumnSpan="2" Content="Start" Grid.Column="7" Grid.Row="2" FontSize="25" Click="Button_Click"/>
     </Grid>
 </Window>

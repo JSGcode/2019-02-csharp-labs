@@ -12,17 +12,123 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
-namespace Lab_101_speedtype_gui
+namespace lab_101_speedtype_gui
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        int errors = 0;
+        static List<char> alphabet = new List<char>();
+        static Stopwatch stopwatch = new Stopwatch();
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            char letter = 'a';
+            errors = 0;
+
+            Timer.Foreground = Brushes.Black;
+            Output.Clear();
+            Input.Clear();
+            Timer.Clear();
+            alphabet.Clear();
+            stopwatch.Restart();
+
+            // Fills the list
+
+            for (int i = 0; i < 26; i++)
+            {
+                alphabet.Add(letter);
+                letter++;
+            }
+            if (IsRandom.IsChecked == true)
+            {
+                Output.Text = Modes1(Shuffle(alphabet));
+            }
+            else
+            {
+                Output.Text = Modes0(alphabet);
+            }
+
+        }
+
+        private void Input_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            char lastLetter = ' ';
+
+            Timer.Text = string.Format("{0}:{1}", Math.Floor(stopwatch.Elapsed.TotalMinutes), stopwatch.Elapsed.ToString("ss"));
+
+            try
+            {
+                lastLetter = Input.Text[Input.Text.Length - 1];
+
+                if (lastLetter == alphabet[Input.Text.Length - 1])
+                {
+                    Input.Foreground = Brushes.Green;
+                }
+                else if (lastLetter != alphabet[Input.Text.Length - 1])
+                {
+                    Input.Foreground = Brushes.Red;
+                    errors++;
+                } 
+                if (Input.Text == Output.Text)
+                {
+                    stopwatch.Stop();
+                    Input.Text = $"You made {errors} mistakes";
+                    Timer.Foreground = Brushes.Blue;
+                }
+            }
+            catch (Exception ex){}
+        }
+
+        static List<char> Shuffle(List<char> rnd_Alphabet)
+        {
+            //instantiate random
+            Random rnd = new Random();
+            int n = rnd_Alphabet.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rnd.Next(n + 1);
+                char value = rnd_Alphabet[k];
+                rnd_Alphabet[k] = rnd_Alphabet[n];
+                rnd_Alphabet[n] = value;
+            }
+            return rnd_Alphabet;
+        }
+
+        static string Modes0(List<char> alphabet)
+        {
+
+            //intialize variables
+            string str = null;
+
+            // Builds the string to be typed
+            foreach (var item in alphabet)
+                str += item;
+            //GameLogic(alphabet);
+            return str;
+        }
+
+        static string Modes1(List<char> alphabet)
+        {
+            //intialize variables
+            string str = null;
+
+            // Builds the string to be typed
+            foreach (var item in alphabet)
+                str += item;
+            //GameLogic(alphabet);
+            return str;
+        }
+
     }
 }
