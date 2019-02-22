@@ -26,4 +26,8 @@
 * 107 List Folders - in progress
 * 108 List Files And Folders - Not started
 * 109 New File With Content - Not started
-* 110 Add Exception to 109 - Not started
+* 110 Add Exception if files already exist 109 - Not started
+* 110 Add Exception if folder already exists 110 - Not started
+
+### Independent project:
+* WPF Hangman Game - Done

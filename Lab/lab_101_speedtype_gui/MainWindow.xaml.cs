@@ -36,6 +36,7 @@ namespace lab_101_speedtype_gui
             errors = 0;
 
             Timer.Foreground = Brushes.Black;
+            Timer.Text = "0:00";
             Output.Clear();
             Input.Clear();
             Timer.Clear();
@@ -51,21 +52,18 @@ namespace lab_101_speedtype_gui
             }
             if (IsRandom.IsChecked == true)
             {
-                Output.Text = Modes1(Shuffle(alphabet));
+                Output.Text = Display(Shuffle(alphabet));
             }
             else
             {
-                Output.Text = Modes0(alphabet);
+                Output.Text = Display(alphabet);
             }
-
         }
 
         private void Input_TextChanged(object sender, TextChangedEventArgs e)
         {
             char lastLetter = ' ';
-
             Timer.Text = string.Format("{0}:{1}", Math.Floor(stopwatch.Elapsed.TotalMinutes), stopwatch.Elapsed.ToString("ss"));
-
             try
             {
                 lastLetter = Input.Text[Input.Text.Length - 1];
@@ -81,9 +79,9 @@ namespace lab_101_speedtype_gui
                 } 
                 if (Input.Text == Output.Text)
                 {
-                    stopwatch.Stop();
-                    Input.Text = $"You made {errors} mistakes";
                     Timer.Foreground = Brushes.Blue;
+                    stopwatch.Stop();
+                    Input.Text = $"You made {errors} mistake(s)";
                 }
             }
             catch (Exception ex){}
@@ -105,20 +103,7 @@ namespace lab_101_speedtype_gui
             return rnd_Alphabet;
         }
 
-        static string Modes0(List<char> alphabet)
-        {
-
-            //intialize variables
-            string str = null;
-
-            // Builds the string to be typed
-            foreach (var item in alphabet)
-                str += item;
-            //GameLogic(alphabet);
-            return str;
-        }
-
-        static string Modes1(List<char> alphabet)
+        static string Display(List<char> alphabet)
         {
             //intialize variables
             string str = null;
@@ -129,6 +114,5 @@ namespace lab_101_speedtype_gui
             //GameLogic(alphabet);
             return str;
         }
-
     }
 }
