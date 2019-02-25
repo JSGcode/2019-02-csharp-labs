@@ -66,6 +66,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_113_ArrayList", "Lab_11
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_114_Entity_GUI", "Lab_114_Entity_GUI\Lab_114_Entity_GUI.csproj", "{47DE174B-396C-48C6-AE40-5ED88622AF80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_115_Norwthwind_Entity_With_OOP", "Lab_115_Norwthwind_Entity_With_OOP\Lab_115_Norwthwind_Entity_With_OOP.csproj", "{246433E8-0DE0-4226-A85F-6C8E2373FBD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -188,6 +190,10 @@ Global
 		{47DE174B-396C-48C6-AE40-5ED88622AF80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47DE174B-396C-48C6-AE40-5ED88622AF80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47DE174B-396C-48C6-AE40-5ED88622AF80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246433E8-0DE0-4226-A85F-6C8E2373FBD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246433E8-0DE0-4226-A85F-6C8E2373FBD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246433E8-0DE0-4226-A85F-6C8E2373FBD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246433E8-0DE0-4226-A85F-6C8E2373FBD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
