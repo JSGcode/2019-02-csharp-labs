@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace lab_04_array
+namespace Lab_04_array
 {
     public class Array
     {

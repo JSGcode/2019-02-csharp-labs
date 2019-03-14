@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace WordType
+namespace SpeedType
 {
     class Program
     {

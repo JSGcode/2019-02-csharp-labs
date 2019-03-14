@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab_105_game_name_and_score_01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="Auto" Width="Auto" Background="BlanchedAlmond">
+        Title="MainWindow" Height="Auto" Width="Auto" Background="Beige">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -27,12 +27,14 @@
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
         <Label Content="Name:" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" FontSize="36"/>
-        <Label Content="Level Reached:" Grid.Row="3" Grid.ColumnSpan="4" FontSize="36" Margin="0,0,66,0" Grid.Column="1"/>
-        <Label Content="Score:" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" FontSize="36"/>
-        <TextBox x:Name="nameBox" Grid.ColumnSpan="6" Grid.Column="3" Grid.Row="1" FontSize="48" Margin="0,0,76.6,0"/>
-        <TextBox x:Name="levelBox" Grid.ColumnSpan="4" Grid.Column="5" Grid.Row="3" FontSize="48" Margin="0,0,76.6,0" HorizontalAlignment="Right" Width="229"/>
-        <TextBox x:Name="scoreBox" Grid.ColumnSpan="5" Grid.Column="3" Grid.Row="5" FontSize="48"/>
+        <Label Content="Level Reached:" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" FontSize="36"/>
+        <Label Content="Score:" Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="2" FontSize="36" Margin="0,0,0.8,0"/>
+        <TextBox x:Name="nameBox" Grid.ColumnSpan="6" Grid.Column="3" Grid.Row="1" FontSize="36"/>
+        <TextBox x:Name="levelBox" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="4" FontSize="36" />
+        <TextBox x:Name="scoreBox" Grid.ColumnSpan="3" Grid.Column="6" Grid.Row="4" FontSize="36" />
+        <Button x:Name="saveBtn" Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" Content="Save" Height="56" VerticalAlignment="Top" FontSize="36" HorizontalAlignment="Left" Width="152" Click="SaveBtn_Click" />
     </Grid>
 </Window>

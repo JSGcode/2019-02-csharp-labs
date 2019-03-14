@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 //     Repeat every second for 100 seconds system.threading.thread.sleep(1000)
 //     Put this onto a WPF app and push to a label, with the new person appearing every second
 
-namespace lab_103_productionline
+namespace Lab_103_productionline
 {
     class Program
     {

@@ -11,9 +11,10 @@ namespace WordType
     {
         static void Main(string[] args)
         {
+            //instantiate list
             List<char> alphabet = new List<char>();
             char letter = 'a';
-            // Builds the list
+            // Fills the list
             for (int i = 0; i < 26; i++)
             {
                 alphabet.Add(letter);
@@ -37,6 +38,7 @@ namespace WordType
 
         static void Shuffle(List<char> rnd_Alphabet)
         {
+            //instantiate random
             Random rnd = new Random();
             int n = rnd_Alphabet.Count;
             while (n > 1)
@@ -53,10 +55,12 @@ namespace WordType
 
         static void GameLogic(List<char> alphabet)
         {
+            //intialize variables
             char input;
             int listItem = 0;
             int errors = 0;
             bool finished = false;
+            //instantiate stopwatch
             Stopwatch stopwatch = new Stopwatch();
 
             stopwatch.Start();
